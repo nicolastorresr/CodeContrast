@@ -46,11 +46,3 @@ CodeContrast is a novel generative model that leverages contrastive learning to 
    ```
 
    This script will use the trained CodeContrast model to generate programming exercises, including problem descriptions, test cases, and code solutions. The generated exercises will be saved in the `generated/` directory.
-
-5. Evaluate the generated exercises:
-
-   ```bash
-   python evaluate.py
-   ```
-
-   This script will evaluate the generated programming exercises using various automatic metrics, such as code correctness, problem-solution alignment, test case coverage, and diversity. Additionally, it will facilitate human evaluation by experts and student studies.
