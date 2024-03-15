@@ -15,7 +15,7 @@ CodeContrast is a novel generative model that leverages contrastive learning to 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/CodeContrast.git
+   git clone https://github.com/nicolastorresr/CodeContrast.git
    ```
 
 2. Install the required dependencies:
