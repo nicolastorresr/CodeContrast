@@ -45,4 +45,4 @@ CodeContrast is a novel generative model that leverages contrastive learning to 
    python generate.py
    ```
 
-   This script will use the trained CodeContrast model to generate programming exercises, including problem descriptions, test cases, and code solutions. The generated exercises will be saved in the `generated/` directory.
+   This script will use the trained CodeContrast model to generate programming exercises, including problem descriptions, test cases, and code solutions.
