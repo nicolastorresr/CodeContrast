@@ -27,7 +27,7 @@ CodeContrast is a novel generative model that leverages contrastive learning to 
 
 ## Usage
 
-1. Prepare your data: Ensure that you have a dataset of programming problems, test cases, and code solutions in the appropriate format. Refer to the `data/` directory for examples.
+1. Prepare your data: Ensure that you have a dataset of programming problems, test cases, and code solutions in the appropriate format.
 
 2. Configure the model: Update the configuration file `config.py` with your desired settings, such as the paths to pretrained models, hidden sizes, and other hyperparameters.
 
