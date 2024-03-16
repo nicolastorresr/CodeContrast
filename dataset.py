@@ -13,10 +13,8 @@ class ProgrammingExerciseDataset(Dataset):
 
     def __getitem__(self, idx):
         # Return a sample from the dataset at the given index
-        sample = self.data[idx]
-        # Process the sample if needed (e.g., tokenize code, extract features)
-        processed_sample = self.process_sample(sample)
-        return processed_sample
+        problem, test_case, solution = self.data[idx]
+        return problem, test_case, solution
 
     def load_data(self, data_path):
         # Load data from data_path into memory
