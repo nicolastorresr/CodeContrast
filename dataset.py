@@ -4,9 +4,9 @@ import json
 """
 This implementation assumes that the test data is stored in a directory with one JSON file per programming exercise.
 Each JSON file should contain a dictionary with the following keys:
-- "problem": a string representing the problem description
-- "test_case": a string representing the test case
-- "solution": a string representing the code solution
+- problem: a string representing the problem description
+- test_case: a string representing the test case
+- solution: a string representing the code solution
 """
 class ProgrammingExerciseDataset(Dataset):
     def __init__(self, data_dir):
