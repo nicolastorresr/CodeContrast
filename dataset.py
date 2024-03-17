@@ -1,29 +1,24 @@
-import torch
 from torch.utils.data import Dataset
-
+import os
+import json
+"""
+This implementation assumes that the test data is stored in a directory with one JSON file per programming exercise.
+"""
 class ProgrammingExerciseDataset(Dataset):
-    def __init__(self, data_path):
-        # Initialize dataset with data from data_path
-        # For example, load data from CSV, JSON, etc.
-        self.data = self.load_data(data_path)
+    def __init__(self, data_dir):
+        self.data_dir = data_dir
+        self.exercise_files = os.listdir(data_dir)
 
     def __len__(self):
-        # Return the total number of samples in the dataset
-        return len(self.data)
+        return len(self.exercise_files)
 
     def __getitem__(self, idx):
-        # Return a sample from the dataset at the given index
-        problem, test_case, solution = self.data[idx]
+        exercise_file = os.path.join(self.data_dir, self.exercise_files[idx])
+        with open(exercise_file, 'r') as f:
+            exercise_data = json.load(f)
+
+        problem = exercise_data['problem']
+        test_case = exercise_data['test_case']
+        solution = exercise_data['solution']
+
         return problem, test_case, solution
-
-    def load_data(self, data_path):
-        # Load data from data_path into memory
-        # Implement this method based on your data format (e.g., CSV, JSON)
-        data = []  # Placeholder, replace with actual data loading code
-        return data
-
-    def process_sample(self, sample):
-        # Process a single sample from the dataset
-        # Implement data preprocessing steps here
-        processed_sample = {}  # Placeholder, replace with actual processing code
-        return processed_sample
